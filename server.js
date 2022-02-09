@@ -6,6 +6,8 @@ const notes = require("./db/db.json");
 const path = require("path");
 const uuid = require("uuid");
 
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+
 
 
 // declared port at 3001
@@ -13,7 +15,16 @@ var PORT = process.env.PORT || 3001;
 
 const app = express();
 
-// Middleware will go here
+// Middleware methods inspired for express.js lessons
+
+    // Parse incoming string or array data
+    app.use(express.urlencoded({ extnded: true}));
+
+    // parse incoming JSON data
+    app.use(express.json());
+
+    // parse incoming static data existing in public folder
+    app.use(express.static("public"));
 
 
 // Here I am setting the routes for APIs
