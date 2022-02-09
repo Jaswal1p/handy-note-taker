@@ -6,7 +6,7 @@ body {
 }
 
 .save-note {
-  display: none;
+  display:block;
 }
 
 .icons i {
@@ -42,7 +42,7 @@ body {
 }
 
 .list-container .card {
-  height: calc(100vh - 70px);
+  height: 150px !important;
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;

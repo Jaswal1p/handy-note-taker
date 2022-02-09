@@ -4,21 +4,21 @@ const fs = require("fs");
 const notes = require("./db/db.json");
 
 const path = require("path");
-const uuid = require("uuid");
-
-const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+// const uuid = require("uuid");
 
 
+
+const app = express();
 
 // declared port at 3001
 var PORT = process.env.PORT || 3001;
 
-const app = express();
+
 
 // Middleware methods inspired for express.js lessons
 
     // Parse incoming string or array data
-    app.use(express.urlencoded({ extnded: true}));
+    app.use(express.urlencoded({ extended: true}));
 
     // parse incoming JSON data
     app.use(express.json());
