@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4} = require('uuid')
 
+const { DH_CHECK_P_NOT_SAFE_PRIME, SSL_OP_$$LEAY__080_CLIENT_DH_BUG } = require("constants");
+
 
 
 const app = express();
