@@ -6,7 +6,7 @@ const notes = require("./db/db.json");
 const path = require("path");
 const uuid = require("uuid");
 
-const {DH_CHECK_P_SAFE_PRIME } = require("constants");
+
 
 // declared port at 3001
 var PORT = process.env.PORT || 3001;
