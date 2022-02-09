@@ -1,14 +1,25 @@
 {
-    "name": "note-taker",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "test": "jest"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.16.4"
-    }
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaswal1p/handy-note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jaswal1p/handy-note-taker/issues"
+  },
+  "homepage": "https://github.com/Jaswal1p/handy-note-taker#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
+}
