@@ -30,11 +30,32 @@ app.post("/api/notes", (req, res) => {
     // every new note will get unique id number to fecilitate add & delete actions
     newNotes.id = uuid.v4();
     notes.push(newNotes);
-    fs.writeFileSync("./db/db.json", JSON.stringyfy(notes))
+    fs.writeFileSync("./db/db.json", JSON.stringyfy(notes));
+
     res.json(notes);
 });
 
+app.delete("/api/notes/:id", (req, res) => {
+    // This method is created to delet notes. Hopefully it works &
+    // I can get extra credit !!!! This one I had to serach on stackoverflow 
+    // & I finally decided to write it this way.
+    const notes = JSON.parse(fs.readFileSync("./db/db.json"));
+    // Magic happens at line 43 where filter function is used to delete/remove a note !!
+    const deletNote = notes.filter((rmvNote) => rmvNote.id !== req.params.id);
+    fs.writeFileSync("./db/db.json", JSON.stringify(deletNote));
 
+    res.json(deletNote);
+})
+
+app.get("/", function (req, res) {
+    // This method is to call home page.
+    res.sendFile(path.join(__dirname, "/public/index.html"));
+});
+
+app.get("/notes", function (req, res) {
+    // This method is to call the notes in a separate file: notes.html
+    res.sendFile(path.join(__dirname, "/public/notes.html"));
+});
 
 
 
