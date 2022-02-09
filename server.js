@@ -4,7 +4,7 @@ const fs = require("fs");
 const notes = require("./db/db.json");
 
 const path = require("path");
-// const uuid = require("uuid");
+const uuid = require("uuid");
 
 
 
@@ -41,7 +41,7 @@ app.post("/api/notes", (req, res) => {
     // every new note will get unique id number to fecilitate add & delete actions
     newNotes.id = uuid.v4();
     notes.push(newNotes);
-    fs.writeFileSync("./db/db.json", JSON.stringyfy(notes));
+    fs.writeFileSync("./db/db.json", json.stringyfy(notes));
 
     res.json(notes);
 });
@@ -53,7 +53,7 @@ app.delete("/api/notes/:id", (req, res) => {
     const notes = JSON.parse(fs.readFileSync("./db/db.json"));
     // Magic happens at line 43 where filter function is used to delete/remove a note !!
     const deletNote = notes.filter((rmvNote) => rmvNote.id !== req.params.id);
-    fs.writeFileSync("./db/db.json", JSON.stringify(deletNote));
+    fs.writeFileSync("./db/db.json", json.stringify(deletNote));
 
     res.json(deletNote);
 })
