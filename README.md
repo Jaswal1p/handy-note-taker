@@ -65,6 +65,7 @@ https://young-cliffs-64859.herokuapp.com/
  The following is needed to test the app:
  Insomnia
  Heroku
+ jest
 
  # Questions
  If you have any questions about the repo/project, please open an issue or contact by: 
