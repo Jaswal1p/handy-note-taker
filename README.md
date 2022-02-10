@@ -55,11 +55,11 @@ https://young-cliffs-64859.herokuapp.com/
  
  # Contributing
 
- Contributors: I and only I can contribute to this project as this time.  
+ Contributors: I and only I can contribute to this project at this time.  
  
  Some day with more established skills I will be able to improvise on it and put this out for contributions from other great developers. 
 
- It will be great to add further functinality to update a particular note, tie them to calendars and auto-tet to a cell phone at a particular time!!
+ It will be great to add further functinality to update a particular note, tie them to calendars and auto-text to a cell phone at a particular date &/or time!!
 
  # Tests
  The following is needed to test the app:
