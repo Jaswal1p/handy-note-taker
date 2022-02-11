@@ -4,10 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4} = require('uuid')
 
-const { DH_CHECK_P_NOT_SAFE_PRIME, SSL_OP_$$LEAY__080_CLIENT_DH_BUG } = require("constants");
-
-
-
 const app = express();
 
 // declared port at 3001
@@ -42,7 +38,7 @@ app.get("/notes", function (req, res) {
 
 app.get("/api/notes", (req, res) => {
     // this rote gets the saved note and joins it to db.jason
-    // res.sendFile(path.join(__dirname, "/db/db.json"))
+    
     fs.readFile("db/db.json", 'utf-8', function(err, data) {
         if (err) throw err;
         res.json(JSON.parse(data))
@@ -51,13 +47,9 @@ app.get("/api/notes", (req, res) => {
 
 app.post("/api/notes", (req, res) => {
     // This is the post method to add a new note entered by user to db.json
-    // const notes = JSON.parse(fs.readFileSync("./db/db.json"));
-    // const newNotes = req.body;
-    // // every new note will get unique id number to fecilitate add & delete actions
-    // newNotes.id = uuidv4();
-    // notes.push(newNotes);
-    // fs.writeFileSync("./db/db.json", json.stringyfy(notes));
-    // res.json(notes);
+    // This is where I had to learn on my about uuid (thans stackoveflow!), reviewed all documentation and had to install addition npm.
+    // This way every new note will get unique id number to fecilitate add & delete actions
+    
     const newNote = {
         title: req.body.title,
         text: req.body.text,
@@ -76,7 +68,8 @@ app.post("/api/notes", (req, res) => {
 });
 
 app.delete("/api/notes/:id", (req, res) => {
-    // This method is created to delet notes. Hopefully it works &
+    // This method is created to delete notes. This is not actually deleting in stricest terms. It is more like leaving something out and to achieve that filter method is used here.
+
     var clicked = req.params.id
     fs.readFile("db/db.json", 'utf-8', function(err, data) {
         if (err) throw err;
@@ -89,8 +82,6 @@ app.delete("/api/notes/:id", (req, res) => {
         res.sendFile(path.join(__dirname, "/public/notes.html"));
     })
 })
-
-
 
 
 // listening port method placed at the end by convetion
