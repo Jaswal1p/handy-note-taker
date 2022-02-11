@@ -10,7 +10,7 @@ https://young-cliffs-64859.herokuapp.com/
 [View License](https://opensource.org/licenses/MIT) 
 
 # Video link
- https://watch.screencastify.com/v/w5Ji5IfE91SDhttx28XU
+ https://watch.screencastify.com/v/aMm1A00Ao66XyIgKi1Vc
  
 # GitHub Repository Link
  https://github.com/Jaswal1p/handy-note-taker.git
