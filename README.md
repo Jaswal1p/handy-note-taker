@@ -10,7 +10,7 @@ https://young-cliffs-64859.herokuapp.com/
 [View License](https://opensource.org/licenses/MIT) 
 
 # Video link
- 
+ https://watch.screencastify.com/v/w5Ji5IfE91SDhttx28XU
  
 # GitHub Repository Link
  https://github.com/Jaswal1p/handy-note-taker.git
@@ -32,8 +32,6 @@ https://young-cliffs-64859.herokuapp.com/
  2. Creating get routes, post routes on insomnia.
  3. Finally coding for connecting with provided front end files, middleware, add endpoints, modularize the code and tested it many times, prior to deployment on Heroku.
  
- # Screenshot of Logic
-
  # Screenshot Insomnia
  ![Screenshot-insomnia](https://user-images.githubusercontent.com/92233527/153342583-b89948eb-a4e7-4d61-a5bc-01a070042751.png)
 
